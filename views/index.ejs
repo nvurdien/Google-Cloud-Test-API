@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <form method="post" action="/" enctype='multipart/form-data'>
+        Select an action: <BR>
+        <input type="radio" name="thing" value="face"> Face Detection<br>
+        <input type="radio" name="thing" value="labels"> Label Detection<br>
+        <input type="radio" name="thing" value="landmarks"> Landmark Detection<br>
+        <input type="radio" name="thing" value="text"> Text Detection<br>
+        <input type="radio" name="thing" value="logos"> Logo Detection<br>
+        <input type="radio" name="thing" value="properties"> Detect Properties<br>
+        <input type="radio" name="thing" value="safesearch"> NSFW Detection<br>
+        <input type="radio" name="thing" value="crophints"> Crop Hints<br>
+        <input type="radio" name="thing" value="web"> Web search Detection<br>
+        <input type="radio" name="thing" value="fulltext"> text Detection<br>
+        <input type='file' name='image'/><br><br>
+        <input type="submit" value="Submit">
+    </form>
+  <% if (body) { %>
+    <%- body %>
+  <% } %>
+  </body>
+</html>
